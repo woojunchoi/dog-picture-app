@@ -1,0 +1,69 @@
+.breeds-list::after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+
+  .breed-button {
+    width: 23%;
+    float: left;
+    position: relative;
+    margin-right: 2.6667%;
+    margin-right: calc(8% / 3);
+    border: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-transform: capitalize;
+    background: #f1f1f1;
+    cursor: pointer;
+  }
+
+  .breed-button:hover .button-background {
+    opacity: 0.5
+  }
+  
+  .breed-button:hover .button-text {
+    color:white;
+  }
+  .breed-button:focus{
+   outline:none;
+  }  
+
+  .breed-button:nth-of-type(4n) {
+   margin-right:0;
+ }
+
+  .button-background, .button-text {
+    transition: all .3s ease;
+    pointer-events: none;
+  }
+  
+  .button-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: black;
+    opacity: 0;
+  }
+  
+  .button-text {
+    position: relative;
+    z-index: 1;
+  }
+  
+  @media only screen and (max-width: 700px) {
+      .breed-button {
+          width: 49%;
+          margin-right: 2%;
+      }
+      .breed-button:nth-of-type(2n) {
+        margin-right:0;
+      }
+  }
+  
