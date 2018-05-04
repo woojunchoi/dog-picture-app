@@ -5,7 +5,7 @@ import BreedsContainer from './BreedsContainer/BreedsContainer';
 function App() {
   return (
     <div>
-        <title>Dogs!</title>
+        <title>Unum Dogs</title>
         <BreedsContainer />
     </div>
  );
