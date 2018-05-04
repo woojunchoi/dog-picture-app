@@ -14,7 +14,7 @@ export default class ImagesList extends Component {
     const imagesList = [];
 
     // Chose to limit to 24 images for now.  Paginination/load-on-scroll would be nice.
-    for (let i = 0; i < images.length; i += 1) {
+    for (let i = 0; i < images.length && i < 37; i += 1) {
       const key = images[i].split('/').slice(-1)[0];
       console.log(images[i].split('/').slice(-1))
       

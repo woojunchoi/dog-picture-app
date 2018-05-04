@@ -21,7 +21,7 @@ export default class BreedsList extends Component {
     const { breeds, selectedBreed } = this.props;
     const breedsList = [];
 
-    for (let i = 0; i < breeds.length; i += 1) {
+    for (let i = 0; i < breeds.length && i<24; i += 1) {
       breedsList.push(
         <button className={cx('breed-button', {selected: selectedBreed === breeds[i]})}
                               key={breeds[i]}
