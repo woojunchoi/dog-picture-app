@@ -31,22 +31,6 @@ const data_reducer = (state = initialState, action) => {
         loading: false,
         images: action.images,
       })
-    case SEARCH_BREEDS:
-      // start with base case so list of all breeds is returned if search value is blank.
-      let filtered = state.allBreeds.slice();
-      const valueReg = new RegExp(action.value.toLowerCase());
-      console.log(valueReg)
-      if (action.value.trim() !== '') {
-        // Find in or store to cache of previous search results
-        if (state.searchCache[action.value]) filtered = state.searchCache[action.value];
-        else {
-          filtered = state.allBreeds.filter(el => el.match(valueReg));
-          state.searchCache[action.value] = filtered;
-        }
-      }
-      return Object.assign({}, state, {
-        showBreeds: filtered,
-      })
     default:
       return state
   }

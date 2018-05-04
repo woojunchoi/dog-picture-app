@@ -19,7 +19,6 @@ const mapStateToProps = store => ({
 const mapDispatchToProps = (dispatch) => ({
   fetchBreeds: () => dispatch(breedsActions.fetchBreeds()),
   fetchImages: (e) => dispatch(breedsActions.fetchImages(e.target.id)),
-  searchBreeds: (e) => dispatch(breedsActions.searchBreeds(e.target.value)),
 });
 
 class BreedsContainer extends Component {
@@ -29,7 +28,7 @@ class BreedsContainer extends Component {
   }
 
   render() {
-    const { showBreeds, selectedBreed, fetchImages, images, searchBreeds } = this.props
+    const { showBreeds, selectedBreed, fetchImages, images} = this.props
 
     return (
       <div className={cx('breeds-container')}>

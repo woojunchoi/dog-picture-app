@@ -4,7 +4,6 @@ export const REQUEST_BREEDS = 'REQUEST_BREEDS';
 export const RECEIVE_BREEDS = 'RECEIVE_BREEDS';
 export const REQUEST_IMAGES = 'REQUEST_IMAGES';
 export const RECEIVE_IMAGES = 'RECEIVE_IMAGES';
-export const SEARCH_BREEDS = 'SEARCH_BREEDS';
 
 export const requestBreeds = () => {
   return {
@@ -30,13 +29,6 @@ export const receiveImages = (json) => {
   return {
     type: RECEIVE_IMAGES,
     images: json.status === 'success' ? json.message : [],
-  }
-}
-
-export const searchBreeds = (value) => {
-  return {
-    type: SEARCH_BREEDS,
-    value,
   }
 }
 
