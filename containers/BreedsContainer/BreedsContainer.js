@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import BreedsList from '../../components/BreedsList'
 import ImagesList from '../../components/ImagesList'
 import * as breedsActions from '../../src/actions/breeds';
-import styles from './breeds.css';
+import styles from './Breeds.css';
 
 const cx = classNames.bind(styles);
 
