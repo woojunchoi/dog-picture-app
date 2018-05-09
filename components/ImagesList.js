@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import styles from './images.css';
 
 export default class ImagesList extends Component {
@@ -11,7 +10,6 @@ export default class ImagesList extends Component {
     const { images } = this.props;
     const imagesList = [];
 
-    // Chose to limit to 37 images for now. load-on-scroll would be nice.
     for (let i = 0; i < images.length && i < 37; i += 1) {
       const key = images[i].split('/').slice(-1)[0];
       console.log(images[i].split('/').slice(-1))

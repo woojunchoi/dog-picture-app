@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class BreedsContainer extends Component {
-  // Retrieve list of breeds once component mounts
+
   componentDidMount() {
     this.props.fetchBreeds();
   }
