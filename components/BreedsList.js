@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-
-import classNames from 'classnames/bind';
 import styles from './breeds.css';
-const cx = classNames.bind(styles);
 
 export default class BreedsList extends Component {
   constructor(props) {
@@ -23,18 +20,18 @@ export default class BreedsList extends Component {
 
     for (let i = 0; i < breeds.length && i<24; i += 1) {
       breedsList.push(
-        <button className={cx('breed-button', {selected: selectedBreed === breeds[i]})}
+        <button className='breed-button'
                               key={breeds[i]}
                               id={breeds[i]}
                               onClick={this.handleClick}>
-          <span className={cx('button-background')}></span>
-          <span className={cx('button-text')}>{breeds[i]}</span>
+          <span className='button-background'></span>
+          <span className='button-text'>{breeds[i]}</span>
         </button>
       );
     }
 
     return (
-      <div className={cx('breeds-list')}>
+      <div className='breeds-list'>
         {breedsList}
       </div>
     );

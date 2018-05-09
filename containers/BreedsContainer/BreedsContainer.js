@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import classNames from 'classnames/bind';
 import { connect } from 'react-redux';
 
 import BreedsList from '../../components/BreedsList'
@@ -7,7 +6,6 @@ import ImagesList from '../../components/ImagesList'
 import * as breedsActions from '../../src/actions/breeds';
 import styles from './Breeds.css';
 
-const cx = classNames.bind(styles);
 
 const mapStateToProps = store => ({
   allBreeds: store.data_reducer.allBreeds,
@@ -31,10 +29,10 @@ class BreedsContainer extends Component {
     const { showBreeds, selectedBreed, fetchImages, images} = this.props
 
     return (
-      <div className={cx('breeds-container')}>
-        <div className={cx('page-top')}>
-          <div className={cx('page-top-inside')}>
-            <div className={cx('header')}>
+      <div className='breeds-container'>
+        <div className='page-top'>
+          <div className='page-top-inside'>
+            <div className='header'>
               <img className='image' src='https://static1.squarespace.com/static/573f8037ab48dec01e52ac1c/t/5a00e752085229b51defa422/1510878370246/?format=1500w'/>
               <p>UNUM DOGS</p>
             </div>
@@ -43,7 +41,7 @@ class BreedsContainer extends Component {
                         onClick={fetchImages} />
           </div>
         </div>
-        <div className={cx('page-bottom')}>
+        <div className='page-bottom'>
           <ImagesList images={images} />
         </div>
       </div>
