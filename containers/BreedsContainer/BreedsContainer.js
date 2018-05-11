@@ -8,9 +8,7 @@ import styles from './Breeds.css';
 
 
 const mapStateToProps = store => ({
-  allBreeds: store.data_reducer.allBreeds,
   showBreeds: store.data_reducer.showBreeds,
-  selectedBreed: store.data_reducer.selectedBreed,
   images: store.data_reducer.images,
 })
 
@@ -26,7 +24,7 @@ class BreedsContainer extends Component {
   }
 
   render() {
-    const { showBreeds, selectedBreed, fetchImages, images} = this.props
+    const { showBreeds, fetchImages, images} = this.props
 
     return (
       <div className='breeds-container'>
@@ -37,7 +35,6 @@ class BreedsContainer extends Component {
               <p>UNUM DOGS</p>
             </div>
             <BreedsList breeds={showBreeds}
-                        selectedBreed={selectedBreed}
                         onClick={fetchImages} />
           </div>
         </div>
