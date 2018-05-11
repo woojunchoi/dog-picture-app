@@ -7,7 +7,7 @@ export default class BreedsList extends Component {
   }
 
   render() {
-    const { breeds, selectedBreed,onClick } = this.props;
+    const { breeds ,onClick } = this.props;
     const breedsList = [];
 
     for (let i = 0; i < breeds.length && i<24; i += 1) {
